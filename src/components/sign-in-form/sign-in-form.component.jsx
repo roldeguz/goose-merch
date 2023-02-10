@@ -30,9 +30,7 @@ const SignInForm = () => {
     }
 
     const SignInWithGoogle = async () => {
-        const { user } = await SignInWithGooglePopup();
-        await createUserDocumentFromAuth(user)
-        //console.log(userDocRef);
+        await SignInWithGooglePopup();
     }
 
     const handleOnSubmit = async (event) => {
@@ -40,7 +38,7 @@ const SignInForm = () => {
 
         try {
             const { user } = await signInUserWithEmailAndPassword(email, password);
-            //console.log(user);
+            
             resetFormFields();
         } catch(error) {
             if (error.code === 'auth/user-not-found') {
