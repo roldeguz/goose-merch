@@ -2,7 +2,7 @@ import styledComponents from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavigationContainer = styledComponents.div`
-    height: 70px;
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
